@@ -39,6 +39,8 @@ def run_system_monolith():
             
            
             n.append(new_name)
+            r.append(new_rank)                  #adding to the r list
+            d.append(new_div)                   #adding to the d list keeps everything in sync
             print("Crew member added.")
             
         elif opt == "3":
