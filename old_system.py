@@ -30,7 +30,7 @@ def run_system_monolith():
             print("Current Crew List:")
             
             for i in range(len(n)):            #matched number of items in the "n" list with len(n)                
-                print(n[i] + " - " + r[i]) 
+                print(n[i] + " - " + r[i] +  " - " + d[i])        #was missing the final list display
                 
         elif opt == "2":
             new_name = input("Name: ")
