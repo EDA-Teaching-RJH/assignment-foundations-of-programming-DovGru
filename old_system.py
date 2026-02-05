@@ -55,7 +55,7 @@ def run_system_monolith():
             count = 0
             
             for rank in r:
-                if rank == "Captain" or "Commander": 
+                if rank == "Captain" or rank == "Commander":            #syntax error, need to be compared twice 
                     count = count + 1
             print("High ranking officers: " + count) 
             
