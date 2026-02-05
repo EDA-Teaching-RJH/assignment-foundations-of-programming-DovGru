@@ -24,12 +24,12 @@ def run_system_monolith():
         print("4. Analyze Data")
         print("5. Exit")
         
-        opt = int(input("Select option: "))       #converted to an integer input
+        opt = input("Select option: ")      
         
         if opt == "1":                         #added another equals
             print("Current Crew List:")
             
-            for i in range(10):
+            for i in range(len(n)):            #matched number of items in the "n" list with len(n)                
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
