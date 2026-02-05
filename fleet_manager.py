@@ -7,6 +7,22 @@ def init_database():
     return n, r, d, i
 
 def display_menu():
+    student = input("What is yor name?: ")
+
+    print("----------------Menu----------------")
+    print("1.View crew members")
+    print("2.Add a member")
+    print("3.Remove a crew member")
+    print("4.Analyse data")
+    print("5.Shutdown System")
+
+    print("Student logged currently logged in:", student)
+
+    choice = input("select an option: ")
+
+    return choice
+
+
 
 
 
