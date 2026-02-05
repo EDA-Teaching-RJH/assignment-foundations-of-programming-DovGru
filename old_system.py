@@ -57,7 +57,7 @@ def run_system_monolith():
             for rank in r:
                 if rank == "Captain" or rank == "Commander":            #syntax error, need to be compared twice 
                     count = count + 1
-            print("High ranking officers: " + count) 
+            print("High ranking officers: ", count)                     #syntax error replaced + with a comma as aa string cannot be attached to an intiger 
             
         elif opt == "5":
             print("Shutting down.")
