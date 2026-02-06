@@ -75,6 +75,13 @@ def update_rank(n, r, ids):
     print("Rank has been updated")
 
 
+def display_roster(n, r, d, ids):
+    print("---------------Current Crew---------------")
+    
+    for i in range(len(n)):
+        print(n[i] + " - " + r[i] +  " - " + d[i] + " - " + ids[i])
+
+
 
 
 
