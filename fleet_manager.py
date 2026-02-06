@@ -46,6 +46,20 @@ def add_member(n, r, d, ids):
     ids.append(new_ids)
 
     print("Member added!")
+
+
+def remove_member(n, r, d, ids):
+    remove = input("Enter the ID to remove a member:")
+
+    if remove in ids:
+        idx = ids.index(remove)             #checks against the list in ids and if found is removed from that index, keeps lists synced
+        n.pop(idx)
+        r.pop(idx)
+        d.pop(idx)
+        ids.pop(idx)
+        print("Member removed.")
+    else:
+        print("ID not found")
     
     
 
