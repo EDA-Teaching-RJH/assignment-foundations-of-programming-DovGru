@@ -101,7 +101,7 @@ def filter_by_division(n, d):
 def calculate_payroll(r):
     total = 0 
 
-    for rank in r:
+    for rank in r:                           #assigns a value to a rank
         if rank == "Captain":
             total += 1000
         elif rank == "Commander":
@@ -114,6 +114,16 @@ def calculate_payroll(r):
             total += 200
     
     return total
+
+
+def count_officers(r):
+    count = 0 
+
+    for rank in r:
+        if rank == "Captain" or rank == "Commander":
+            count += 1
+
+    return count
 
 
 
