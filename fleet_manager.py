@@ -90,7 +90,14 @@ def search_crew(n, r, d, ids):
             print(n[i] + " - " + r[i] + " - " + d[i] + " - " + ids[i])  
 
 
-              
+def filter_by_division(n, d):
+    select = input("Which division would you like Command, Operations, or Sciences?")
+
+    for i in range(len(n)):
+        if d[i] == select:
+            print(n[i])
+
+
 
 
 
