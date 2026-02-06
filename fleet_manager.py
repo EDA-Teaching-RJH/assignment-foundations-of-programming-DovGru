@@ -120,13 +120,36 @@ def count_officers(r):
     count = 0 
 
     for rank in r:
-        if rank == "Captain" or rank == "Commander":
+        if rank == "Captain" or rank == "Commander":           #
             count += 1
 
     return count
 
 
+def main():
+    n, r, d ,ids = init_database()
 
+    while True:
+        choice = display_menu()
+
+        if choice == "1":                                                         #if and else statements for the options chosen and which functions to call.
+            display_roster(n, r, d, ids)
+        elif choice == "2":
+            add_member(n, r, d, ids)
+        elif choice == "3":
+            remove_member(n, r, d, ids)
+        elif choice =="4":
+            print("Analysing...")
+            print("Total Payroll:", calculate_payroll(r))
+            print("High ranking officers:", count_officers(r))
+        elif choice == "5":
+            print("Shutting down.")
+            break
+        else:
+            print("Invalid option")
+
+main()
+            
 
 
     
