@@ -93,10 +93,27 @@ def search_crew(n, r, d, ids):
 def filter_by_division(n, d):
     select = input("Which division would you like Command, Operations, or Sciences?")
 
-    for i in range(len(n)):
-        if d[i] == select:
+    for i in range(len(n)):             
+        if d[i] == select:                          #if the selction is in that list it prints the matching memebers
             print(n[i])
 
+
+def calculate_payroll(r):
+    total = 0 
+
+    for rank in r:
+        if rank == "Captain":
+            total += 1000
+        elif rank == "Commander":
+            total += 800
+        elif rank == "Lt. Commander":
+            total += 600
+        elif rank == "Lieutenant":
+            total += 400
+        elif rank == "Ensign":
+            total += 200
+    
+    return total
 
 
 
