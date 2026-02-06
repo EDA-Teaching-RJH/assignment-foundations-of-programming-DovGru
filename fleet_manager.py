@@ -63,14 +63,14 @@ def remove_member(n, r, d, ids):
 
 
 def update_rank(n, r, ids):
-    update_id = input("Which ID would you like to update:")
+    update_id = input("Which ID would you like to update:")               #gets an ID
 
     if update_id not in ids:
-        print("Invalid ID.")
+        print("Invalid ID.")                #if the ID is not in list break
         return
     
     idx = ids.index(update_id)
-    new_rank = input("Enter a new rank:")
+    new_rank = input("Enter a new rank:")        #replaces the current rank with new rank 
     r[idx] = new_rank
     print("Rank has been updated")
 
@@ -79,9 +79,18 @@ def display_roster(n, r, d, ids):
     print("---------------Current Crew---------------")
     
     for i in range(len(n)):
-        print(n[i] + " - " + r[i] +  " - " + d[i] + " - " + ids[i])
+        print(n[i] + " - " + r[i] +  " - " + d[i] + " - " + ids[i])          #prints the memebers in the lists with all attached details in the parallel lists 
 
 
+def search_crew(n, r, d, ids):
+    term = input("Enter a name to search:")
+
+    for i in range(len(n)):
+        if term in n[i]:                                                             #checks the term entered 
+            print(n[i] + " - " + r[i] + " - " + d[i] + " - " + ids[i])  
+
+
+              
 
 
 
