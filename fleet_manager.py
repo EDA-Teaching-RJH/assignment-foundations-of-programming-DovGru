@@ -26,7 +26,7 @@ def display_menu():
 
 def add_member(n, r, d, ids):
     name = input("What is the members name?: ")
-    rank = input("What is their rank?:")
+    rank = input("What is their rank?: ")
     division = input("What division are they in?: ")
     new_ids = input("What is their ID?: ")
 
@@ -49,7 +49,7 @@ def add_member(n, r, d, ids):
 
 
 def remove_member(n, r, d, ids):
-    remove = input("Enter the ID to remove a member:")
+    remove = input("Enter the ID to remove a member: ")
 
     if remove in ids:
         idx = ids.index(remove)             #checks against the list in ids and if found is removed from that index, keeps lists synced
@@ -63,14 +63,14 @@ def remove_member(n, r, d, ids):
 
 
 def update_rank(n, r, ids):
-    update_id = input("Which ID would you like to update:")               #gets an ID
+    update_id = input("Which ID would you like to update: ")               #gets an ID
 
     if update_id not in ids:
         print("Invalid ID.")                #if the ID is not in list break
         return
     
     idx = ids.index(update_id)
-    new_rank = input("Enter a new rank:")        #replaces the current rank with new rank 
+    new_rank = input("Enter a new rank: ")        #replaces the current rank with new rank 
     r[idx] = new_rank
     print("Rank has been updated")
 
@@ -83,7 +83,7 @@ def display_roster(n, r, d, ids):
 
 
 def search_crew(n, r, d, ids):
-    term = input("Enter a name to search:")
+    term = input("Enter a name to search: ")
 
     for i in range(len(n)):
         if term in n[i]:                                                             #checks the term entered 
@@ -91,7 +91,7 @@ def search_crew(n, r, d, ids):
 
 
 def filter_by_division(n, d):
-    select = input("Which division would you like Command, Operations, or Sciences?")
+    select = input("Which division would you like Command, Operations, or Sciences?: ")
 
     for i in range(len(n)):             
         if d[i] == select:                          #if the selction is in that list it prints the matching memebers
