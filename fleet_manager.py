@@ -60,6 +60,25 @@ def remove_member(n, r, d, ids):
         print("Member removed.")
     else:
         print("ID not found")
+
+
+def update_rank(n, r, ids):
+    update_id = input("Which ID would you like to update:")
+
+    if update_id not in ids:
+        print("Invalid ID.")
+        return
+    
+    idx = ids.index(update_id)
+    new_rank = input("Enter a new rank:")
+    r[idx] = new_rank
+    print("Rank has been updated")
+
+
+
+
+
+
     
     
 
